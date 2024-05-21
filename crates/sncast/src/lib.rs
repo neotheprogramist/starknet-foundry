@@ -84,13 +84,13 @@ pub struct WaitForTx {
 #[derive(Deserialize, Serialize, Clone, Debug, Copy, PartialEq)]
 pub struct ValidatedWaitParams {
     #[serde(default)]
-    timeout: u16,
+    pub timeout: u16,
 
     #[serde(
         default,
         rename(serialize = "retry-interval", deserialize = "retry-interval")
     )]
-    retry_interval: u8,
+    pub retry_interval: u8,
 }
 
 impl ValidatedWaitParams {
